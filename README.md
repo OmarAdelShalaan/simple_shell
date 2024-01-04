@@ -18,7 +18,7 @@
 ### Your shell will be compiled this way:
 ### `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
-## Memcheck, a memory error detector
+# Memcheck, a memory error detector
 ## `valgrind -s --leak-check=full --show-leak-kinds=all ./hsh`
 
 
