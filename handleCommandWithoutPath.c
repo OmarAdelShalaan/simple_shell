@@ -17,7 +17,7 @@ void handleCommandWithoutPATH(char **argv)
 	}
 	else
 	{
-		printf("No such file or directory\n");
+		/*printf("No such file or directory\n");*/
 	}
 }
 

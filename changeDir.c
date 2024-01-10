@@ -26,7 +26,7 @@ void changeDir(char **argv)
 		else
 			return;
 	}
-	else if (!strcmp(argv[1], "-"))
+	else if (!_strcmp(argv[1], "-"))
 	{
 		old_dir = getenv("OLDPWD");
 		if (chdir(old_dir) == 0)

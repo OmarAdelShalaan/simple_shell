@@ -29,6 +29,16 @@ void variablesReplacement(char **argv);
 void exitHandle(char **argv);
 void echoHandle(char **argv);
 void handleCommandWithoutPATH(char **argv);
+int _atoi(char *s);
+
+/* String Handle*/
+int _putchar(char ch);
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
+char *_strcat(char *dest, char *src);
+int _putstr(char *str);
+
 
 #endif
 

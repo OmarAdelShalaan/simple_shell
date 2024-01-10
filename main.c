@@ -24,17 +24,17 @@ int main(void)
 			continue;
 		}
 		cutCommandLine(buffer, argv);
-		if (!strcmp(argv[0], "exit"))
+		if (!_strcmp(argv[0], "exit"))
 			exitHandle(argv);
 		else if ((*argv[0]) == '/')
 			exeCommandLine(argv);
-		else if (!strcmp(argv[0], "env"))
+		else if (!_strcmp(argv[0], "env"))
 			Printenv();
-		else if ((!strcmp(argv[0], "cd")))
+		else if ((!_strcmp(argv[0], "cd")))
 			changeDir(argv);
-		else if (((!strcmp(argv[0], "echo")) && (argv[1] == NULL)))
+		else if (((!_strcmp(argv[0], "echo")) && (argv[1] == NULL)))
 			echoHandle(argv);
-		else if (((!strcmp(argv[0], "echo")) && (argv[1][0] == '$')) ||
+		else if (((!_strcmp(argv[0], "echo")) && (argv[1][0] == '$')) ||
 				(argv[0][0] == '$'))
 			echoHandle(argv);
 		else

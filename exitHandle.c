@@ -11,7 +11,7 @@ void exitHandle(char **argv)
 
 	if (argv[1] != NULL)
 	{
-		tempExit = atoi(argv[1]);
+		tempExit = _atoi(argv[1]);
 		argv[1] = NULL;
 	}
 	free(argv[0]);

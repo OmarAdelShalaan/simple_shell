@@ -18,16 +18,16 @@ char *PutPATH(char **argv)
 
 	if (path == NULL)
 		return (NULL);
-	pathlen = strlen(path);
+	pathlen = _strlen(path);
 	NewPath = (char *)malloc(pathlen + 1);
-	strcpy(NewPath, path);
+	_strcpy(NewPath, path);
 	NewPath[pathlen] = '\0';
 	token = strtok(NewPath, ":");
 	while (token)
 	{
-		strcpy(buf, token);
-		strcat(buf, "/");
-		strcat(buf, argv[0]);
+		_strcpy(buf, token);
+		_strcat(buf, "/");
+		_strcat(buf, argv[0]);
 		stat_ret = stat(buf, &st);
 		if (stat_ret == 0 && S_ISREG(st.st_mode) && (st.st_mode & S_IXUSR))
 		{
@@ -35,7 +35,7 @@ char *PutPATH(char **argv)
 			ret = malloc(sizeof(char) * (strlen(buf) + 1));
 			if (!ret)
 				return (NULL);
-			strcpy(ret, buf);
+			_strcpy(ret, buf);
 			return (ret);
 		}
 		token = strtok(NULL, ":");

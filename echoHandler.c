@@ -7,12 +7,13 @@
 
 void echoHandle(char **argv)
 {
-	if ((!strcmp(argv[0], "echo")) && (argv[1] == NULL))
+	if ((!_strcmp(argv[0], "echo")) && (argv[1] == NULL))
 	{
-		printf("\n");
+		/*printf("\n");*/
+		_putchar('\n');
 		argv[0] = NULL;
 	}
-	else if (((!strcmp(argv[0], "echo") && argv[1][0] == '$') ||
+	else if (((!_strcmp(argv[0], "echo") && argv[1][0] == '$') ||
 				(argv[0][0] == '$')))
 	{
 		variablesReplacement(argv);

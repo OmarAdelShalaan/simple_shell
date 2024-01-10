@@ -11,7 +11,9 @@ void Printenv(void)
 
 	for (env = environ; *env != NULL; env++)
 	{
-		printf("%s\n", *env);
+		/*printf("%s\n", *env);*/
+		_putstr(*env);
+		_putchar('\n');
 	}
 }
 

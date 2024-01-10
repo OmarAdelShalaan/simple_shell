@@ -14,8 +14,8 @@ void FreeARGV(char **argv)
 		if (argv[i] != NULL)
 		{
 			tempPTR = argv[i];
-			printf("argv: %s\n", argv[i]);
-			printf("temp: %s\n", tempPTR);
+			/*printf("argv: %s\n", argv[i]);*/
+			/*printf("temp: %s\n", tempPTR);*/
 			free(tempPTR);
 			argv[i] = NULL;
 		}

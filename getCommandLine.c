@@ -10,19 +10,21 @@ void gitCommandLine(char **buffer, size_t *bufsize)
 	/* ----------------------get command line -------------------*/
 	size_t characters;
 	/*pid_t pid_to_kill;*/
-	printf("($) ");
+	/*printf("($) ");*/
+	_putstr("($) ");
 	characters = getline(buffer, bufsize, stdin);
 	if ((int)characters == EOF)
 	{
 		free(*buffer);
 		*buffer = NULL;
-		printf("\n");
+		/*printf("\n");*/
+		_putchar('\n');
 		return;
 	}
 	if (buffer == NULL)
 	{
 		free(buffer);
-		printf("Fauiler Realloc\n");
+		/*printf("Fauiler Realloc\n");*/
 	}
 	if ((*buffer)[characters - 1] == '\n' && characters > 1)
 		(*buffer)[characters - 1] = '\0';

@@ -14,7 +14,8 @@ void variablesReplacement(char **argv)
 	int i = 1;
 
 	if (argv[0][0] == '$' && argv[0][1] == '\0')
-		printf("$: command not found\n");
+		/*printf("$: command not found\n");*/
+		_putstr("$: command not found\n");
 	else if (argv[0][0] == '$')
 	{
 		while (argv[0][i] != '\0')
@@ -25,9 +26,13 @@ void variablesReplacement(char **argv)
 		envstr[i - 1] = '\0';
 		envPtr = getenv(envstr);
 		if (envPtr != NULL)
-			printf("%s: %s\n", envPtr, "No such file or directory");
+		{
+			/*printf("%s: %s\n", envPtr, "No such file or directory");*/
+			_putstr(envPtr);
+			_putstr(": No such file or directory\n");
+		}
 	}
-	else if (!strcmp(argv[0], "echo"))
+	else if (!_strcmp(argv[0], "echo"))
 	{
 		while (argv[1][i] != '\0')
 		{
@@ -37,9 +42,11 @@ void variablesReplacement(char **argv)
 		envstr[i - 1] = '\0';
 		envPtr = getenv(envstr);
 		if (envPtr != NULL)
-			printf("%s\n", envPtr);
-		else
-			printf("\n");
+		{
+			_putstr(envPtr);
+			_putchar('\n');
+		} else
+			_putchar('\n');
 	}
 }
 
