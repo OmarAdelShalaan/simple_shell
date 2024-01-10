@@ -19,7 +19,7 @@
 ### `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
 # Memcheck, a memory error detector
-## `valgrind -s --leak-check=full --show-leak-kinds=all ./hsh`
+### `valgrind -s --leak-check=full --show-leak-kinds=all ./hsh`
 
 
 ## General
@@ -113,3 +113,6 @@
 
 ## Try Shell
 ### Download this file: [hsh](./hsh)
+
+## video
+[![pic](./Video/simple_shell.jpg)](./Video/simple_shell.mp4)
